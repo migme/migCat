@@ -33,6 +33,7 @@ public class MainActivity extends FragmentActivity {
     private ProfileFragment mProfileFragment;
     private FriendFragment mFriendFragment;
 //    private PostFragment mPostFragment;
+    private HyperLinkFragment mHyperLinkFragment;
     private OtherFragment mOtherFragment;
 
     private LinkedList<Integer> mFragmentIndexStack = new LinkedList<Integer>();
@@ -55,6 +56,7 @@ public class MainActivity extends FragmentActivity {
         mProfileFragment = new ProfileFragment(mToken);
         mFriendFragment = new FriendFragment(mToken);
 //        mPostFragment = new PostFragment(mToken);
+        mHyperLinkFragment = new HyperLinkFragment();
         mOtherFragment = new OtherFragment(mToken);
 
         initViews();
@@ -139,6 +141,9 @@ public class MainActivity extends FragmentActivity {
                 fragment = mFriendFragment;
                 break;
             case 3:
+                fragment = mHyperLinkFragment;
+                break;
+            case 4:
                 fragment = mOtherFragment;
                 break;
             default:
